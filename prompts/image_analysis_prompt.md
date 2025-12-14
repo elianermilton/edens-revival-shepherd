@@ -76,3 +76,13 @@ Do not invent details.
   "urgency_level": "Monitor",
   "clarifying_question": "How many hours of direct sunlight does this plant receive each day?"
 }
+
+### Mapping Notes (for storage)
+- "plant_type" maps to plant_profile.suspected_species
+- "confidence" maps to plant_profile.species_confidence
+- "urgency_level" must be exactly: Stable | Monitor | ActionRecommended
+- "observations" must be 0–4 items
+- "condition_summary" must be warm, calm, and under 240 characters
+- If no safety issues are visible, return an empty array for "safety_flags"
+- If you ask a clarifying question, place it in "clarifying_question"; otherwise return an empty string
+
