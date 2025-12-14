@@ -59,7 +59,9 @@
           "likely_issues",
           "recommended_actions",
           "safety_flags",
-          "user_note"
+          "user_note",
+          "toxicity_risk_level",
+          "invasive_risk_level"
         ],
         "properties": {
           "entry_id": { "type": "string", "minLength": 1 },
@@ -100,6 +102,9 @@
           "safety_flags": {
             "type": "array",
             "items": { "type": "string", "minLength": 1, "maxLength": 160 }
+            "toxicity_risk_level": { "type": "string", "enum": ["None", "Possible", "Likely"] },
+            "invasive_risk_level": { "type": "string", "enum": ["None", "Possible", "Likely"] },
+
           },
 
           "user_note": {
