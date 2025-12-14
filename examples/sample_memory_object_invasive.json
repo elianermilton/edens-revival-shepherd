@@ -38,6 +38,8 @@
       "safety_flags": [
         "Possible invasive species; may outcompete nearby plants if left unchecked"
       ],
+      "toxicity_risk_level": "Possible",
+      "invasive_risk_level": "Possible",
       "user_note": "This keeps spreading no matter what I do. It’s starting to creep toward my other beds."
     }
   ],
