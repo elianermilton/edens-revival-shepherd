@@ -38,6 +38,8 @@
       "safety_flags": [
         "Toxic to pets if ingested; sap may cause irritation"
       ],
+      "toxicity_risk_level": "Likely",
+      "invasive_risk_level": "None",
       "user_note": "My cat keeps sniffing around this one and it made me nervous."
     }
   ],
