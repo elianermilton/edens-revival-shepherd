@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://edens-revival.app/schemas/eden-memory-schema.json",
+  "title": "Eden Memory Schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["plant_profile", "observation_entries", "care_history"],
+  "properties": {
+    "plant_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "plant_id",
+        "suspected_species",
+        "species_confidence",
+        "mode",
+        "container_type",
+        "zone",
+        "safety_priority",
+        "created_at",
+        "updated_at"
+      ],
+      "properties": {
+        "plant_id": { "type": "string", "minLength": 1 },
+        "nickname": { "type": "string", "maxLength": 80 },
+        "suspected_species": { "type": "string" },
+        "species_confidence": {
+          "type": "string",
+          "enum": ["High", "Medium", "Low", "Empty"]
+        },
+        "mode": { "type": "string", "enum": ["Indoor", "Outdoor", "Unknown"] },
+        "container_type": {
+          "type": "string",
+          "enum": ["Pot", "Ground", "RaisedBed", "Unknown"]
+        },
+        "zone": { "type": "string" },
+        "safety_priority": {
+          "type": "string",
+          "enum": ["Pets", "Children", "PetsAndChildren", "NoneSpecified"]
+        },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      }
+    },
+
+    "observation_entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "entry_id",
+          "plant_id",
+          "timestamp",
+          "image_reference",
+          "condition_summary",
+          "observations",
+          "urgency_level",
+          "likely_issues",
+          "recommended_actions",
+          "safety_flags",
+          "user_note"
+        ],
+        "properties": {
+          "entry_id": { "type": "string", "minLength": 1 },
+          "plant_id": { "type": "string", "minLength": 1 },
+          "timestamp": { "type": "string", "format": "date-time" },
+          "image_reference": { "type": "string", "minLength": 1 },
+
+          "condition_summary": { "type": "string", "minLength": 1, "maxLength": 240 },
+
+          "observations": {
+            "type": "array",
+            "minItems": 0,
+            "maxItems": 4,
+            "items": { "type": "string", "minLength": 1, "maxLength": 160 }
+          },
+
+          "internal_checklist_notes": {
+            "type": "string",
+            "maxLength": 1200,
+            "description": "Optional private internal notes. Keep concise. May be empty."
+          },
+
+          "urgency_level": {
+            "type": "string",
+            "enum": ["Stable", "Monitor", "ActionRecommended"]
+          },
+
+          "likely_issues": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1, "maxLength": 120 }
+          },
+
+          "recommended_actions": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1, "maxLength": 200 }
+          },
+
+          "safety_flags": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1, "maxLength": 160 }
+          },
+
+          "user_note": {
+            "type": "string",
+            "description": "User’s optional feelings, context, or job note. May be empty."
+          }
+        }
+      }
+    },
+
+    "care_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "care_id",
+          "plant_id",
+          "action_taken",
+          "action_timestamp",
+          "followup_window",
+          "followup_result",
+          "trend",
+          "user_followup_note"
+        ],
+        "properties": {
+          "care_id": { "type": "string", "minLength": 1 },
+          "plant_id": { "type": "string", "minLength": 1 },
+
+          "related_entry_id": {
+            "type": "string",
+            "description": "Optional link to the observation entry that suggested this action."
+          },
+
+          "action_taken": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "description": "User-confirmed action taken (watered, fertilized, pruned, repotted, treated pests, moved location, etc.)."
+          },
+
+          "action_timestamp": { "type": "string", "format": "date-time" },
+
+          "followup_window": {
+            "type": "string",
+            "enum": ["24h", "48h", "72h", "1w", "Other"]
+          },
+
+          "followup_result": {
+            "type": "string",
+            "enum": ["Better", "Same", "Worse", "Unknown"]
+          },
+
+          "trend": {
+            "type": "string",
+            "enum": ["Improving", "Stable", "Declining", "Unknown"]
+          },
+
+          "user_followup_note": {
+            "type": "string",
+            "description": "Optional user follow-up note. May be empty."
+          }
+        }
+      }
+    }
+  }
+}
