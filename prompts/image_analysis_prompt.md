@@ -49,7 +49,8 @@ Respond in **JSON only** using this schema:
   "toxicity_risk_level": "",
   "invasive_risk_level": "",
   "urgency_level": "",
-  "clarifying_question": ""
+  "clarifying_question": "",
+  "edible_category": "",
 }
 ### Risk Level Rules
 - "toxicity_risk_level" must be exactly one of: None | Possible | Likely
@@ -73,7 +74,6 @@ Do not invent details.
 {
   "plant_type": "Tomato",
   "confidence": "High",
-  "edible_category": "",
   "condition_summary": "This looks like a tomato plant, and it’s doing okay overall — just showing some early signs of stress.",
   "observations": [
     "Lower leaves are yellowing while upper growth remains green",
