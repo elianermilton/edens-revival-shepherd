@@ -51,6 +51,7 @@
         "required": [
           "entry_id",
           "plant_id",
+          "edible_category",
           "timestamp",
           "image_reference",
           "condition_summary",
