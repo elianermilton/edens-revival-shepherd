@@ -1,0 +1,57 @@
+{
+  "plant_profile": {
+    "plant_id": "plant_003",
+    "nickname": "",
+    "suspected_species": "English Ivy",
+    "species_confidence": "Medium",
+    "mode": "Outdoor",
+    "container_type": "Ground",
+    "zone": "7b",
+    "safety_priority": "NoneSpecified",
+    "created_at": "2025-12-14T20:40:00-05:00",
+    "updated_at": "2025-12-14T20:40:00-05:00"
+  },
+  "observation_entries": [
+    {
+      "entry_id": "entry_003",
+      "plant_id": "plant_003",
+      "timestamp": "2025-12-14T20:40:00-05:00",
+      "image_reference": "private://images/plant_003/entry_003.jpg",
+      "condition_summary": "This appears to be ivy, and it’s growing very vigorously — almost too comfortably.",
+      "observations": [
+        "Dense trailing growth is spreading across the ground",
+        "Vines appear to be climbing toward nearby structures or trees",
+        "Leaves look healthy and glossy with fast expansion",
+        "Growth is forming a thick mat over other plants or soil"
+      ],
+      "internal_checklist_notes": "Outdoor ground cover with aggressive spread. High potential to outcompete nearby plants. Species ID is medium confidence due to similarity among ivy types. Invasive risk depends on local region and species confirmation.",
+      "urgency_level": "ActionRecommended",
+      "likely_issues": [
+        "Potential invasive species behavior (aggressive spread and smothering)"
+      ],
+      "recommended_actions": [
+        "Confirm identification with a close-up photo of leaves and vines (including where it attaches)",
+        "Begin containment by cutting back outer edges and removing runners before they root further",
+        "If it is confirmed invasive in your region, remove in sections and bag plant material to prevent re-rooting",
+        "Monitor the area weekly for regrowth and pull new shoots early"
+      ],
+      "safety_flags": [
+        "Possible invasive species; may outcompete nearby plants if left unchecked"
+      ],
+      "user_note": "This keeps spreading no matter what I do. It’s starting to creep toward my other beds."
+    }
+  ],
+  "care_history": [
+    {
+      "care_id": "care_003",
+      "plant_id": "plant_003",
+      "related_entry_id": "entry_003",
+      "action_taken": "Cut back outer growth and removed visible runners",
+      "action_timestamp": "2025-12-14T21:05:00-05:00",
+      "followup_window": "1w",
+      "followup_result": "Unknown",
+      "trend": "Unknown",
+      "user_followup_note": ""
+    }
+  ]
+}
