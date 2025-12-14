@@ -46,9 +46,26 @@ Respond in **JSON only** using this schema:
   "likely_issues": [],
   "recommended_actions": [],
   "safety_flags": [],
+  "toxicity_risk_level": "",
+  "invasive_risk_level": "",
   "urgency_level": "",
   "clarifying_question": ""
 }
+### Risk Level Rules
+- "toxicity_risk_level" must be exactly one of: None | Possible | Likely
+  - Use Likely only when the plant is commonly known as toxic and identification confidence is Medium or High
+  - Use Possible when toxicity is uncertain or identification confidence is Low
+  - Use None only when there is no visible reason to flag toxicity AND identification confidence is High for a non-toxic plant
+
+- "invasive_risk_level" must be exactly one of: None | Possible | Likely
+  - Use Likely only when the plant is commonly known as invasive in many regions AND behavior in the image suggests aggressive spread AND confidence is Medium or High
+  - Use Possible when identification is uncertain or regional status is unknown
+  - Use None only when there is no visible reason to suspect invasive behavior
+
+- If a risk level is Possible or Likely, add an explanatory item in "safety_flags"
+- If a risk level is None, "safety_flags" can still include other safety items (example: thorns, skin irritation) if clearly visible
+
+
 
 If information cannot be determined, leave the field empty.
 Do not invent details.
