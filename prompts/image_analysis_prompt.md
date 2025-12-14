@@ -64,8 +64,13 @@ Respond in **JSON only** using this schema:
   - Use None only when there is no visible reason to suspect invasive behavior
 
 - If a risk level is Possible or Likely, add an explanatory item in "safety_flags"
-- If a risk level is None, "safety_flags" can still include other safety items (example: thorns, skin irritation) if clearly visible
+  - If a risk level is None, "safety_flags" can still include other safety items (example: thorns, skin irritation) if clearly visible
 
+### Edible Category Rules
+- "edible_category" must be exactly one of: Fruit | Vegetable | Herb | Unknown | Empty
+  - Use Empty only when plant type confidence is Low and you cannot responsibly classify
+  - Use Unknown when the plant is identified but edibility cannot be safely determined from the image alone
+  - If "edible_category" is Fruit, Vegetable, or Herb, do not imply it is safe to eat unless identification confidence is High
 
 
 If information cannot be determined, leave the field empty.
@@ -99,6 +104,8 @@ Do not invent details.
 - "plant_type" maps to plant_profile.suspected_species
 - "confidence" maps to plant_profile.species_confidence
 - "urgency_level" must be exactly: Stable | Monitor | ActionRecommended
+- "edible_category" can be stored on each observation entry and may later be promoted to plant profile if repeatedly consistent
+
 - "observations" must be 0–4 items
 - "condition_summary" must be warm, calm, and under 240 characters
 - If no safety issues are visible, return an empty array for "safety_flags"
