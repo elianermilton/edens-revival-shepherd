@@ -1,0 +1,41 @@
+{
+  "plant_profile": {
+    "plant_id": "plant_004",
+    "nickname": "Minty",
+    "suspected_species": "Mint",
+    "species_confidence": "High",
+    "mode": "Outdoor",
+    "container_type": "Pot",
+    "zone": "7b",
+    "safety_priority": "NoneSpecified",
+    "created_at": "2025-12-14T22:10:00-05:00",
+    "updated_at": "2025-12-14T22:10:00-05:00"
+  },
+  "observation_entries": [
+    {
+      "entry_id": "entry_004",
+      "plant_id": "plant_004",
+      "timestamp": "2025-12-14T22:10:00-05:00",
+      "image_reference": "private://images/plant_004/entry_004.jpg",
+      "condition_summary": "This looks like mint, and it’s lively — dense growth, rich color, and no obvious stress.",
+      "observations": [
+        "Leaves appear evenly green with no spotting",
+        "Growth looks dense and compact rather than leggy",
+        "Soil appears evenly moist, not soggy",
+        "New growth is visible at multiple nodes"
+      ],
+      "internal_checklist_notes": "Outdoor potted herb with vigorous, healthy growth. Light appears adequate. No visible pest damage. Moisture looks balanced. No invasive flag within pot, but mint can spread aggressively if planted in-ground.",
+      "urgency_level": "Stable",
+      "likely_issues": [],
+      "recommended_actions": [
+        "Keep doing what you’re doing: water when the top layer starts to dry",
+        "Pinch tips occasionally to encourage bushier growth"
+      ],
+      "safety_flags": [],
+      "toxicity_risk_level": "None",
+      "invasive_risk_level": "None",
+      "user_note": "This one makes me happy. It smells amazing."
+    }
+  ],
+  "care_history": []
+}
