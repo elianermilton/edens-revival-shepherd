@@ -17,6 +17,9 @@
       "plant_id": "plant_002",
       "timestamp": "2025-12-14T19:45:00-05:00",
       "image_reference": "private://images/plant_002/entry_002.jpg",
+      "clarifying_question": "",
+      "clarifying_question_reason": "Empty"
+
       "next_best_action": "Move it out of pet reach first, then keep watering consistent.",
      "condition_summary": "This looks like a fiddle leaf fig, and it’s mostly steady — just asking for a little more consistency."
      "observations": [
