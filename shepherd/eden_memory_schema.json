@@ -18,7 +18,8 @@
         "zone",
         "safety_priority",
         "created_at",
-        "updated_at"
+        "updated_at",
+        "next_best_action"
       ],
       "properties": {
         "plant_id": { "type": "string", "minLength": 1 },
@@ -69,7 +70,8 @@
           "plant_id": { "type": "string", "minLength": 1 },
           "timestamp": { "type": "string", "format": "date-time" },
           "image_reference": { "type": "string", "minLength": 1 },
-
+          
+          "next_best_action": { "type": "string", "minLength": 1, "maxLength": 120 },
           "condition_summary": { "type": "string", "minLength": 1, "maxLength": 240 },
 
           "observations": {
