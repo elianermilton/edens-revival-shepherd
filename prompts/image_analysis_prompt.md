@@ -95,6 +95,7 @@ Do not invent details.
     "Check soil moisture daily rather than on a fixed schedule",
     "Apply a balanced fertilizer if yellowing continues after consistent watering"
   ],
+  "next_best_action": "",
   "safety_flags": [],
   "urgency_level": "Monitor",
   "clarifying_question": "How many hours of direct sunlight does this plant receive each day?"
