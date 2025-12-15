@@ -40,12 +40,14 @@
       ],
       "toxicity_risk_level": "Possible",
       "invasive_risk_level": "Possible",
+      "edible_category": "Unknown",
       "user_note": "This keeps spreading no matter what I do. It’s starting to creep toward my other beds."
     }
   ],
   "care_history": [
     {
-      "care_id": "care_003",
+      "care_id": "care_003","edible_category": "Unknown",
+
       "plant_id": "plant_003",
       "related_entry_id": "entry_003",
       "action_taken": "Cut back outer growth and removed visible runners",
