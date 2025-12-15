@@ -28,6 +28,11 @@
         "species_confidence": {
           "type": "string",
           "enum": ["High", "Medium", "Low", "Empty"]
+        "clarifying_question_reason": {
+          "type": "string",
+        "enum": ["Light", "Watering", "Location", "Identification", "Safety", "Other", "Empty"]
+},
+
         },
         "mode": { "type": "string", "enum": ["Indoor", "Outdoor", "Unknown"] },
         "container_type": {
@@ -63,7 +68,8 @@
           "safety_flags",
           "user_note",
           "toxicity_risk_level",
-          "invasive_risk_level"
+          "invasive_risk_level",
+          "clarifying_question_reason"
         ],
         "properties": {
           "entry_id": { "type": "string", "minLength": 1 },
