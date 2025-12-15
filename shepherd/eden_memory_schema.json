@@ -18,8 +18,7 @@
         "zone",
         "safety_priority",
         "created_at",
-        "updated_at",
-        "next_best_action"
+        "updated_at"
       ],
       "properties": {
         "plant_id": { "type": "string", "minLength": 1 },
@@ -28,11 +27,6 @@
         "species_confidence": {
           "type": "string",
           "enum": ["High", "Medium", "Low", "Empty"]
-        "clarifying_question_reason": {
-          "type": "string",
-        "enum": ["Light", "Watering", "Location", "Identification", "Safety", "Other", "Empty"]
-},
-
         },
         "mode": { "type": "string", "enum": ["Indoor", "Outdoor", "Unknown"] },
         "container_type": {
@@ -57,28 +51,35 @@
         "required": [
           "entry_id",
           "plant_id",
-          "edible_category",
           "timestamp",
           "image_reference",
+          "edible_category",
           "condition_summary",
+          "next_best_action",
           "observations",
           "urgency_level",
           "likely_issues",
           "recommended_actions",
           "safety_flags",
-          "user_note",
           "toxicity_risk_level",
           "invasive_risk_level",
-          "clarifying_question_reason"
+          "clarifying_question",
+          "clarifying_question_reason",
+          "user_note"
         ],
         "properties": {
           "entry_id": { "type": "string", "minLength": 1 },
           "plant_id": { "type": "string", "minLength": 1 },
           "timestamp": { "type": "string", "format": "date-time" },
           "image_reference": { "type": "string", "minLength": 1 },
-          
-          "next_best_action": { "type": "string", "minLength": 1, "maxLength": 120 },
+
+          "edible_category": {
+            "type": "string",
+            "enum": ["Fruit", "Vegetable", "Herb", "Unknown", "Empty"]
+          },
+
           "condition_summary": { "type": "string", "minLength": 1, "maxLength": 240 },
+          "next_best_action": { "type": "string", "minLength": 1, "maxLength": 120 },
 
           "observations": {
             "type": "array",
@@ -111,9 +112,26 @@
           "safety_flags": {
             "type": "array",
             "items": { "type": "string", "minLength": 1, "maxLength": 160 }
-            "toxicity_risk_level": { "type": "string", "enum": ["None", "Possible", "Likely"] },
-            "invasive_risk_level": { "type": "string", "enum": ["None", "Possible", "Likely"] },
+          },
 
+          "toxicity_risk_level": {
+            "type": "string",
+            "enum": ["None", "Possible", "Likely"]
+          },
+
+          "invasive_risk_level": {
+            "type": "string",
+            "enum": ["None", "Possible", "Likely"]
+          },
+
+          "clarifying_question": {
+            "type": "string",
+            "description": "If no question is needed, return an empty string."
+          },
+
+          "clarifying_question_reason": {
+            "type": "string",
+            "enum": ["Light", "Watering", "Location", "Identification", "Safety", "Other", "Empty"]
           },
 
           "user_note": {
