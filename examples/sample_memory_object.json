@@ -17,6 +17,7 @@
       "plant_id": "plant_001",
       "timestamp": "2025-12-14T18:30:00-05:00",
       "image_reference": "private://images/plant_001/entry_001.jpg",
+      "clarifying_question_reason": "Light"
       "condition_summary": "This looks like a tomato plant, and it’s doing okay overall — just showing some early signs of stress.",
       "next_best_action": "Water deeply today until runoff, then check moisture daily.",
       "observations": [
