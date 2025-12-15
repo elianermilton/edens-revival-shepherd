@@ -17,6 +17,7 @@
       "plant_id": "plant_003",
       "timestamp": "2025-12-14T20:40:00-05:00",
       "image_reference": "private://images/plant_003/entry_003.jpg",
+      "next_best_action": "Contain it now by cutting back edges and removing runners before they root.",
      "condition_summary": "This appears to be ivy, and it’s thriving aggressively — the kind of growth that can crowd out neighbors."
      "observations": [
         "Dense trailing growth is spreading across the ground",
