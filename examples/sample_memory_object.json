@@ -17,45 +17,13 @@
       "plant_id": "plant_001",
       "timestamp": "2025-12-14T18:30:00-05:00",
       "image_reference": "private://images/plant_001/entry_001.jpg",
-      "clarifying_question_reason": "Light"
-      "condition_summary": "This looks like a tomato plant, and it’s doing okay overall — just showing some early signs of stress.",
-      "next_best_action": "Water deeply today until runoff, then check moisture daily.",
-      "observations": [
-        "Lower leaves are yellowing while upper growth remains green",
-        "Some leaf curl is visible along the edges",
-        "Top layer of soil appears dry",
-        "Plant is growing in a container outdoors"
-      ],
-      "internal_checklist_notes": "Sun appears angled and direct. Soil surface looks dry with possible uneven moisture. No obvious pests seen. Growth is slightly leggy suggesting light angle or spacing constraints. No clear rot visible.",
-      "urgency_level": "Monitor",
-      "likely_issues": [
-        "Inconsistent watering",
-        "Early nutrient deficiency, possibly nitrogen"
-      ],
-      "recommended_actions": [
-        "Water deeply until excess drains from the bottom of the container",
-        "Check soil moisture daily rather than on a fixed schedule",
-        "Apply a balanced fertilizer if yellowing continues after consistent watering"
-      ],
-      "safety_flags": [],
-      "toxicity_risk_level": "Possible",
-      "invasive_risk_level": "None",
+
       "edible_category": "Fruit",
 
-      "user_note": "Snapped this after work. Trying to get my routine consistent."
-    }
-  ],
-  "care_history": [
-    {
-      "care_id": "care_001",
-      "plant_id": "plant_001",
-      "related_entry_id": "entry_001",
-      "action_taken": "Watered deeply until runoff",
-      "action_timestamp": "2025-12-14T19:10:00-05:00",
-      "followup_window": "48h",
-      "followup_result": "Unknown",
-      "trend": "Unknown",
-      "user_followup_note": ""
-    }
-  ]
-}
+      "condition_summary": "This looks like a tomato plant, and it’s doing okay overall — just showing some early signs of stress.",
+      "next_best_action": "Water deeply today until runoff, then check moisture daily.",
+
+      "observations": [
+        "Lower leaves are yellowing while upper growth remains green",
+        "Some leaf curl is visible a
+
