@@ -72,6 +72,12 @@ Respond in **JSON only** using this schema:
   - Use Unknown when the plant is identified but edibility cannot be safely determined from the image alone
   - If "edible_category" is Fruit, Vegetable, or Herb, do not imply it is safe to eat unless identification confidence is High
 
+### Next Best Action Rules
+- "next_best_action" must be a single sentence under 120 characters
+  - It must be the first, most impactful step the user should take
+  - It must not contradict "recommended_actions"
+  - If urgency_level is Stable, "next_best_action" should be a gentle maintenance step or reassurance
+  - If a safety risk is Likely, "next_best_action" should prioritize safety first
 
 If information cannot be determined, leave the field empty.
 Do not invent details.
