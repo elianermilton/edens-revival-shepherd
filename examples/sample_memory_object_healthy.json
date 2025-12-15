@@ -17,6 +17,7 @@
       "plant_id": "plant_004",
       "timestamp": "2025-12-14T22:10:00-05:00",
       "image_reference": "private://images/plant_004/entry_004.jpg",
+      "next_best_action": "Keep routine steady and pinch tips to encourage fuller growth.",
       "condition_summary": "This looks like mint, and it’s lively — dense growth, rich color, and no obvious stress.",
       "observations": [
         "Leaves appear evenly green with no spotting",
