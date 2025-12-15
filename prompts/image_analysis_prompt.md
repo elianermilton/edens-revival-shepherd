@@ -78,6 +78,12 @@ Respond in **JSON only** using this schema:
   - It must not contradict "recommended_actions"
   - If urgency_level is Stable, "next_best_action" should be a gentle maintenance step or reassurance
   - If a safety risk is Likely, "next_best_action" should prioritize safety first
+### Clarifying Question Reason Rules
+- "clarifying_question_reason" must be exactly one of: Light | Watering | Location | Identification | Safety | Other | Empty
+  - If "clarifying_question" is an empty string, "clarifying_question_reason" must be "Empty"
+  - If "clarifying_question" is not empty, "clarifying_question_reason" must not be "Empty"
+  - Ask at most one question total
+
 
 If information cannot be determined, leave the field empty.
 Do not invent details.
