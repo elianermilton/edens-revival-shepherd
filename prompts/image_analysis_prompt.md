@@ -104,7 +104,8 @@ Do not invent details.
   "next_best_action": "",
   "safety_flags": [],
   "urgency_level": "Monitor",
-  "clarifying_question": "How many hours of direct sunlight does this plant receive each day?"
+  "clarifying_question": "How many hours of direct sunlight does this plant receive each day?",
+    "clarifying_question_reason": ""
 }
 
 ### Mapping Notes (for storage)
