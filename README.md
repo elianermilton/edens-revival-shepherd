@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Eden’s Revival 🌱
 ### An AI Botanical Shepherd for plant maintenance, safety, and seasonal guidance
 
